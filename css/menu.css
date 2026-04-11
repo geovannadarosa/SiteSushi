@@ -1,56 +1,79 @@
+/* Estilo do cabeçalho do site */
 header{
-    width: 100%;
-    background-color: var(--color-primary-2);
-    padding: 28px 8%;
-    top: 0;
-    position: sticky;
-    z-index: 3;
+    width: 100%; /* Ocupa toda a largura da tela */
+    background-color: var(--color-primary-2); /* Define a cor de fundo usando variável */
+    padding: 28px 8%; /* Espaço interno: 28px em cima/baixo e 8% nas laterais */
+    top: 0; /* Define que o elemento ficará colado no topo */
+    position: sticky; /* Faz o cabeçalho "grudar" no topo ao rolar a página */
+    z-index: 3; /* Define a prioridade de camada (fica acima de outros elementos) */
 }
+
+/* Barra de navegação */
 .nav-bar{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    width: 100%; /* Ocupa toda a largura */
+    display: flex; /* Usa Flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between; /* Coloca espaço entre os itens (um em cada lado) */
 }
+
+/* Logo do menu */
 #nav-logo{
-    font-size: 24px;
-    color: var(--color-primary-7);
+    font-size: 24px; /* Tamanho da fonte */
+    color: var(--color-primary-7); /* Cor do texto */
 }
+
+/* Lista de navegação */
 .nav-list{
-    display: flex;
-    gap: 48px;
+    display: flex; /* Coloca os itens lado a lado */
+    gap: 48px; /* Espaço entre os itens */
 }
+
+/* Links do menu */
 .nav-item a{
-    color: var(--color-neutra-1);
-    font-weight: 600;
+    color: var(--color-neutra-1); /* Cor do texto */
+    font-weight: 600; /* Deixa o texto mais grosso (semi-negrito) */
 }
+
+/* Menu mobile e botão mobile */
 .mobile-menu, .mobile-btn{
-    display: none;
+    display: none; /* Esconde esses elementos na tela normal */
 }
+
+/* Responsividade: quando a tela for menor que 1170px */
 @media screen and (max-width:1170px){
+
+    /* Esconde o menu normal */
     .nav-bar{
-        display: none;
+        display: none; /* Some com a barra de navegação principal */
     }
+
+    /* Botão do menu mobile */
     .mobile-btn{
-        display: block;
-        border: none;
-        background-color: transparent;
-        font-size: 1.5rem;
-        cursor: pointer;
+        display: block; /* Mostra o botão */
+        border: none; /* Remove a borda */
+        background-color: transparent; /* Fundo transparente */
+        font-size: 1.5rem; /* Tamanho do ícone */
+        cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
     }
+
+    /* Quando o menu mobile estiver ativo */
     .mobile-menu.active{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: flex; /* Mostra o menu */
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center; /* Centraliza os itens */
     }
+
+    /* Lista do menu mobile */
     .mobile-nav-list{
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 12px 5px;
+        display: flex; /* Usa Flexbox */
+        flex-direction: column; /* Itens em coluna */
+        gap: 12px; /* Espaço entre os itens */
+        margin: 12px 5px; /* Espaço externo */
     }
+
+    /* Itens do menu mobile */
     .mobile-nav-list .nav-item{
-        text-align: center;
+        text-align: center; /* Centraliza o texto */
     }
 
 }
