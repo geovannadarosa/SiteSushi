@@ -8,6 +8,8 @@
 
 @import url('avaliacoes.css');
 
+/* o import funciona para puxar os arquivos  */
+
 :root{
     --color-primary-1: #fff;
     --color-primary-2: #ffe8b4;
@@ -20,133 +22,158 @@
     --color-neutra-1: #1d1d1d;
     --color-neutra-2: #fff;
 }
-
+/* o --color-primaty- facilita na padronização de cores ou para usar como variavel, em especifico em rgb, e o --color-neutra- ele usa cores mais neutras como o proprio nome diz, como branco, preto... */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    margin: 0; /*espaço fora do elemento*/
+    padding: 0; /* espaço dentro do elemento*/
+    box-sizing: border-box; /* ele retira todo o parameto, antigo. ou seja, ele zera tudo  */
+    font-family: 'poppins', sans-serif; /*se relaciona ao tipo da fonte*/
 }
 a{
-    text-decoration: none;
+    text-decoration: none; /*aqui em especifico esta tirando qualquer tipo de decoração do texto, mas tbm pode adicionar*/
 }
 li{
-    list-style: none;
+    list-style: none; /* muda o símbolo da  lista, como bolinha, quadrado,...*/
 }
+/* Estilo do botão padrão */
 .btn-default{
-    border: none;
-    display: flex;
-    align-items: center;
-    padding: 10px 14px;
-    background-color: var(--color-primary-6);
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
-    transition: 0.3s ease;
-    justify-content: center;
+    border: none; /* Remove a borda do botão */
+    display: flex; /* Usa o modelo Flexbox para organizar os elementos internos */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px 14px; /* Espaço interno: 10px em cima/baixo e 14px esquerda/direita */
+    background-color: var(--color-primary-6); /* Cor de fundo usando uma variável */
+    border-radius: 8px; /* Arredonda os cantos do botão */
+    font-weight: 600; /* Deixa o texto mais grosso (semi-negrito) */
+    cursor: pointer; /* Mostra a "mãozinha" ao passar o mouse */
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2); /* Cria uma sombra ao redor */
+    transition: 0.3s ease; /* Faz uma transição suave nas mudanças */
+    justify-content: center; /* Centraliza os itens horizontalmente */
 }
 
+/* Quando o mouse passa por cima do botão */
 .btn-default:hover{
-    background-color: var(--color-primary-3);
+    background-color: var(--color-primary-3); /* Muda a cor de fundo */
 }
 
+/* Área dos botões de redes sociais */
 .social-media-btn{
-    display: flex;
-    gap: 18px;
+    display: flex; /* Organiza os botões em linha */
+    gap: 18px; /* Espaço entre os botões */
 }
 
+/* Estilo de cada botão de rede social */
 .social-media-btn a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 40px;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    background-color: var(--color-neutra-2);
-    color: var(--color-neutra-1);
-    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.2);
-    transition: 0.6s ease;
-    justify-content: center;
+    display: flex; /* Usa Flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 45px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    font-size: 1.2rem; /* Tamanho do ícone/texto */
+    border-radius: 8px; /* Cantos arredondados */
+    background-color: var(--color-neutra-2); /* Cor de fundo */
+    color: var(--color-neutra-1); /* Cor do texto/ícone */
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.2); /* Sombra */
+    transition: 0.6s ease; /* Transição suave */
+    justify-content: center; /* Centraliza horizontalmente */
 }
 
+/* Quando passa o mouse no botão social */
 .social-media-btn a:hover{
-    box-shadow: 0px 0px 12px 4px var(--color-primary-5);
+    box-shadow: 0px 0px 12px 4px var(--color-primary-5); /* Muda a cor da sombra */
 }
 
+/* Título principal da seção */
 .section-tittle{
-    color: var(--color-primary-6);
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 100px;
-}
-.section-subtittle{
-    font-size: 2rem;
-    text-align: center;
-}
-.area-cards{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    margin-top: 32px;
-}
-.cards{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    width: 350px;
-    gap: 18px;
-    padding: 20px;
-    background-color: var(--color-neutra-2);
-    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.2);
-    position: relative;
-    overflow: hidden;
-}
-.card-heart{
-    position: absolute;
-    background-color: var(--color-primary-6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-    height: 70px;
-    color: var(--color-primary-1);
-    font-size: 1.563rem;
-    right: -10px;
-    top: -10px;
-    border-radius: 0px 37.5px 0px 42.5px;
-}
-.area-imagem{
-    width: 300px;
-    height: 200px;
-    border-radius: 5%;
-}
-.card-imagem{
-    width: 100%;
-    border-radius: 5%;
-    height: 100%;
-    object-fit: cover;
-}
-.card-tittle{
-    font-size: 1.5rem;
-    color: var(--color-primary-6);
-    padding: 5px;
-    text-align: center;
+    color: var(--color-primary-6); /* Cor do texto */
+    font-size: 2rem; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 100px; /* Espaço acima do elemento */
 }
 
+/* Subtítulo da seção */
+.section-subtittle{
+    font-size: 2rem; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Área que contém os cards */
+.area-cards{
+    width: 100%; /* Ocupa toda a largura */
+    display: flex; /* Usa Flexbox */
+    justify-content: center; /* Centraliza os cards */
+    flex-wrap: wrap; /* Permite quebrar linha quando necessário */
+    gap: 24px; /* Espaço entre os cards */
+    margin-top: 32px; /* Espaço acima */
+}
+
+/* Estilo de cada card */
+.cards{
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    border-radius: 20px; /* Arredonda os cantos */
+    width: 350px; /* Largura do card */
+    gap: 18px; /* Espaço entre os elementos internos */
+    padding: 20px; /* Espaço interno */
+    background-color: var(--color-neutra-2); /* Cor de fundo */
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.2); /* Sombra */
+    position: relative; /* Permite posicionar elementos dentro dele */
+    overflow: hidden; /* Esconde conteúdo que ultrapassar o tamanho */
+}
+
+/* Ícone de coração no canto do card */
+.card-heart{
+    position: absolute; /* Permite posicionar livremente */
+    background-color: var(--color-primary-6); /* Cor de fundo */
+    display: flex; /* Usa Flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 70px; /* Largura */
+    height: 70px; /* Altura */
+    color: var(--color-primary-1); /* Cor do ícone */
+    font-size: 1.563rem; /* Tamanho do ícone */
+    right: -10px; /* Distância da direita */
+    top: -10px; /* Distância do topo */
+    border-radius: 0px 37.5px 0px 42.5px; /* Arredondamento personalizado */
+}
+
+/* Área da imagem */
+.area-imagem{
+    width: 300px; /* Largura */
+    height: 200px; /* Altura */
+    border-radius: 5%; /* Cantos arredondados */
+}
+
+/* Imagem do card */
+.card-imagem{
+    width: 100%; /* Ocupa toda a largura */
+    border-radius: 5%; /* Cantos arredondados */
+    height: 100%; /* Ocupa toda a altura */
+    object-fit: cover; /* Ajusta a imagem sem deformar */
+}
+
+/* Título do card */
+.card-tittle{
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: var(--color-primary-6); /* Cor do texto */
+    padding: 5px; /* Espaço interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Descrição do card */
 .card-descricao{
-    color: #1d1d1d;
-    text-align: center;
+    color: #1d1d1d; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
 }
+
+/* Estilo das estrelas de avaliação */
 .card-rate i{
-    color: var(--color-primary-6);
+    color: var(--color-primary-6); /* Cor das estrelas */
 }
+
+/* Área do preço */
 .card-price{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    display: flex; /* Usa Flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px; /* Espaço entre os elementos */
 }

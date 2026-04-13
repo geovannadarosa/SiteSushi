@@ -1,7 +1,8 @@
+/* Seção do cardápio */
 .cardapio{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    display: flex; /* Ativa o Flexbox para organizar os elementos internos */
+    flex-direction: column; /* Coloca os elementos um embaixo do outro (em coluna) */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    min-height: 100vh; /* Altura mínima igual à altura total da tela */
 }

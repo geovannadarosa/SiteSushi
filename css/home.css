@@ -1,111 +1,145 @@
+/* Seção principal da Home */
 .Home{
-    display: flex;
-    min-height: calc(100vh - 91px);
-    position: relative ;
-    width: 100%;
+    display: flex; /* Usa Flexbox para organizar os elementos */
+    min-height: calc(100vh - 91px); /* Altura mínima: altura da tela menos 91px (ex: altura do header) */
+    position: relative; /* Permite posicionar elementos dentro dele */
+    width: 100%; /* Ocupa toda a largura da tela */
 }
+
+/* Forma decorativa (shape) */
 .shape{
-    width: 49%;
-    height: 90%;
-    background-color: var(--color-neutra-1);
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    border-radius: 50% 60% 50% 60%;
-    z-index: 1;
+    width: 49%; /* Largura da forma */
+    height: 90%; /* Altura da forma */
+    background-color: var(--color-neutra-1); /* Cor de fundo */
+    position: absolute; /* Permite posicionar livremente */
+    top: 5%; /* Distância do topo */
+    right: 5%; /* Distância da direita */
+    border-radius: 50% 60% 50% 60%; /* Arredondamento irregular (forma orgânica) */
+    z-index: 1; /* Camada mais baixa */
 }
+
+/* Área do banner */
 .banner{
-    z-index: 2;
+    z-index: 2; /* Fica acima da shape */
 }
+
+/* Imagem do banner */
 .banner img{
-    width: 40%;
-    position: absolute;
-    top: 5%;
-    right: 5%;
+    width: 40%; /* Largura da imagem */
+    position: absolute; /* Permite posicionar a imagem */
+    top: 5%; /* Distância do topo */
+    right: 5%; /* Distância da direita */
 }
+
+/* Área do texto principal (Call To Action) */
 .cta{
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-left: 0;
+    width: 35%; /* Largura da área */
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    gap: 28px; /* Espaço entre os elementos */
+    margin-top: 5%; /* Espaço acima */
+    margin-left: 5%; /* Espaço à esquerda */
+    margin-left: 0; /* Sobrescreve o valor anterior (fica sem margem esquerda) */
 }
 
+/* Título principal */
 .cta .tittle{
-    font-size: 4rem;
-    color: var(--color-neutra-1);
+    font-size: 4rem; /* Tamanho grande da fonte */
+    color: var(--color-neutra-1); /* Cor do texto */
 }
 
+/* Parte destacada do título */
 .cta .tittle span{
-    color: var(--color-primary-6);
+    color: var(--color-primary-6); /* Cor diferente para destacar palavra */
 }
 
+/* Área dos botões */
 .cta-buttons{
-    display: flex;
-    gap:24px;
+    display: flex; /* Usa Flexbox */
+    gap: 24px; /* Espaço entre os botões */
 }
+
+/* Links dentro dos botões */
 .cta-buttons a{
-    color: var(--color-neutra-1);
+    color: var(--color-neutra-1); /* Cor do texto */
 }
 
+/* Botão do telefone */
 #phone-button{
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    background-color: var(--color-neutra-2);
-    padding: 8px 14px;
-    font-weight: 500;
-    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.2);
-    border-radius: 5px;
+    display: flex; /* Usa Flexbox */
+    gap: 8px; /* Espaço entre ícone e texto */
+    align-items: center; /* Alinha verticalmente */
+    background-color: var(--color-neutra-2); /* Cor de fundo */
+    padding: 8px 14px; /* Espaço interno */
+    font-weight: 500; /* Espessura da fonte */
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.2); /* Sombra */
+    border-radius: 5px; /* Cantos arredondados */
 }
 
+/* Banner para celular */
 .banner-mobile{
-    display: none;
+    display: none; /* Esconde o banner mobile no computador */
 }
 
+/* Responsividade: quando a tela for menor que 600px */
 @media screen and (max-width:600px){
+
+    /* Esconde banner e shape no celular */
     .banner, .shape{
-        display: none;
-    }
-    .banner-mobile{
-        display: block;
-        width: 100%;
-    }
-    .banner-mobile img{
-        margin-top: 1px;
-        position: absolute;
-        width: 100%;
+        display: none; /* Remove esses elementos */
     }
 
+    /* Mostra o banner mobile */
+    .banner-mobile{
+        display: block; /* Exibe o banner */
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    /* Imagem do banner mobile */
+    .banner-mobile img{
+        margin-top: 1px; /* Pequeno espaço acima */
+        position: absolute; /* Posicionamento livre */
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    /* Área do texto no celular */
     .cta{
-        width: 100%;
-        align-items: center;
-        text-align: center;
-        margin-left: 0%;
+        width: 100%; /* Ocupa toda a largura */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
+        margin-left: 0%; /* Remove margem esquerda */
     }
+
+    /* Ajuste da seção Home no celular */
     .Home{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+        width: 100%; /* Ocupa toda a largura */
+        display: flex; /* Usa Flexbox */
+        flex-direction: column; /* Organiza os itens em coluna */
     }
+
+    /* Título menor no celular */
     .cta .tittle{
-        font-size: 3.5rem;
+        font-size: 3.5rem; /* Reduz o tamanho da fonte */
     }
+
+    /* Descrição no celular */
     .cta .descricao{
-        font-size: 1.3em;
-        width: 95%;
+        font-size: 1.3em; /* Tamanho da fonte */
+        width: 95%; /* Largura do texto */
     }   
+
+    /* Ajuste da imagem */
     .banner img{
-        top: 78%;
-        position: absolute;
-        right: 30%;
-        width: 100%;
+        top: 78%; /* Move a imagem para baixo */
+        position: absolute; /* Posicionamento livre */
+        right: 30%; /* Distância da direita */
+        width: 100%; /* Ocupa toda a largura */
     }
+
+    /* Botões empilhados no celular */
     .cta-buttons{
-        display: flex;
-        flex-direction: column;
+        display: flex; /* Usa Flexbox */
+        flex-direction: column; /* Coloca os botões um embaixo do outro */
     }
 
 }
