@@ -21,7 +21,7 @@ header{
     gap: 48px;
 }
 .nav-item a{
-    color: var(--color-neutra-1);
+    color: var(--color-neutra-);
     font-weight: 600;
 }
 .mobile-menu, .mobile-btn{
