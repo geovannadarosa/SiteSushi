@@ -1,0 +1,16 @@
+footer{
+    background-color: var(--color-primary-3);
+}
+.footer-itens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 8% 24px 8%;
+}
+.copyright{
+    color: var(--color-primary-1-);
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
