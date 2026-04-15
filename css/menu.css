@@ -1,19 +1,19 @@
-/* Estilo do cabeçalho do site */
+/* Cabeçalho do site */
 header{
     width: 100%; /* Ocupa toda a largura da tela */
     background-color: var(--color-primary-2); /* Define a cor de fundo usando variável */
     padding: 28px 8%; /* Espaço interno: 28px em cima/baixo e 8% nas laterais */
-    top: 0; /* Define que o elemento ficará colado no topo */
-    position: sticky; /* Faz o cabeçalho "grudar" no topo ao rolar a página */
-    z-index: 3; /* Define a prioridade de camada (fica acima de outros elementos) */
+    top: 0; /* Fixa o elemento no topo */
+    position: sticky; /* Faz o header "grudar" no topo ao rolar a página */
+    z-index: 3; /* Define a prioridade da camada (fica acima de outros elementos) */
 }
 
 /* Barra de navegação */
 .nav-bar{
     width: 100%; /* Ocupa toda a largura */
-    display: flex; /* Usa Flexbox para organizar os itens */
+    display: flex; /* Usa Flexbox */
     align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: space-between; /* Coloca espaço entre os itens (um em cada lado) */
+    justify-content: space-between; /* Coloca espaço entre os itens (um à esquerda e outro à direita) */
 }
 
 /* Logo do menu */
@@ -25,18 +25,18 @@ header{
 /* Lista de navegação */
 .nav-list{
     display: flex; /* Coloca os itens lado a lado */
-    gap: 48px; /* Espaço entre os itens */
+    gap: 48px; /* Espaço entre os itens do menu */
 }
 
 /* Links do menu */
 .nav-item a{
-    color: var(--color-neutra-1); /* Cor do texto */
+    color: var(--color-neutra-); /* Define a cor do texto */
     font-weight: 600; /* Deixa o texto mais grosso (semi-negrito) */
 }
 
 /* Menu mobile e botão mobile */
 .mobile-menu, .mobile-btn{
-    display: none; /* Esconde esses elementos na tela normal */
+    display: none; /* Esconde esses elementos na tela normal (desktop) */
 }
 
 /* Responsividade: quando a tela for menor que 1170px */
