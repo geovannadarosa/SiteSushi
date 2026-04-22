@@ -10,6 +10,8 @@
 
 @import url('footer.css');
 
+@import url('carrossel.css');
+
 /* o import funciona para puxar os arquivos  */
 
 :root{

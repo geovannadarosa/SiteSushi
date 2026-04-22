@@ -1,0 +1,52 @@
+.area-carrossel{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.track{
+    display: flex;
+    width: max-content;
+    gap: 20px;
+    animation: carrossel 13.5s linear infinite;
+}
+.track img{
+    width: 250px;
+    /* margin-right: 10px; */
+    height: 180px;
+    object-fit: cover;
+}
+@keyframes carrossel{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-1890px);
+    }
+}
+
+.area-carrossel-principal{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.carrossel-principal{
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carrossel-principal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.area-carrossel-principal button{
+    z-index: 2;
+    position: absolute;
+    color: aliceblue;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.area-carrossel-principal:first-of-type{
+    z-index: 12;
+}
